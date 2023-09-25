@@ -31,8 +31,8 @@
 % appearance
 \usepackage[kerning,spacing]{microtype} % more compact and arguably nicer
 
-% Uncomment the following line if you want the columns of the last page 
-% equal in size. But note that doing so may cause issues with some 
+% Uncomment the following line if you want the columns of the last page
+% equal in size. But note that doing so may cause issues with some
 % document-generating tools.
 % \usepackage{flushend}
 
@@ -43,10 +43,10 @@
 \usepackage{xcolor}             % color definitions, to be use for...
 \usepackage[]{hyperref}         % ...clickable refs within pdf...
 \hypersetup{                    % ...like so
-  colorlinks,
-  linkcolor={green!80!black},
-  citecolor={red!70!black},
-  urlcolor={blue!70!black}
+	colorlinks,
+	linkcolor={green!80!black},
+	citecolor={red!70!black},
+	urlcolor={blue!70!black}
 }
 
 %
@@ -70,7 +70,7 @@
 % USENIX wants no page numbers for camera-ready papers, so that they can
 % number them themselves.  But submitted papers should have page numbers
 % for the reviewers' convenience.
-% 
+%
 %
 % \pagestyle{empty}
 
@@ -81,49 +81,49 @@
 % them in roman.
 %
 \def\maketitle{\par
- \begingroup
-   \renewcommand\thefootnote{\fnsymbol{footnote}}%
-   \def\@makefnmark{\hbox to\z@{$\m@th^{\@thefnmark}$\hss}}%
-    \long\def\@makefntext##1{\parindent 1em\noindent
-            \hbox to1.8em{\hss$\m@th^{\@thefnmark}$}##1}%
-   \if@twocolumn
-     \twocolumn[\@maketitle]%
-     \else \newpage
-     \global\@topnum\z@
-     \@maketitle \fi\@thanks
- \endgroup
- \setcounter{footnote}{0}%
- \let\maketitle\relax
- \let\@maketitle\relax
- \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\thanks\relax}
+	\begingroup
+	\renewcommand\thefootnote{\fnsymbol{footnote}}%
+	\def\@makefnmark{\hbox to\z@{$\m@th^{\@thefnmark}$\hss}}%
+	\long\def\@makefntext##1{\parindent 1em\noindent
+		\hbox to1.8em{\hss$\m@th^{\@thefnmark}$}##1}%
+	\if@twocolumn
+		\twocolumn[\@maketitle]%
+	\else \newpage
+		\global\@topnum\z@
+		\@maketitle \fi\@thanks
+	\endgroup
+	\setcounter{footnote}{0}%
+	\let\maketitle\relax
+	\let\@maketitle\relax
+	\gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\thanks\relax}
 
 \def\@maketitle{\newpage
- \vbox to 2.5in{
- \vspace*{\fill}
- \vskip 2em
- \begin{center}%
-  {\Large\bf \@title \par}%
-  \vskip 0.375in minus 0.300in
-  {\large\it
-   \lineskip .5em
-   \begin{tabular}[t]{c}\@author
-   \end{tabular}\par}%
- \end{center}%
- \par
- \vspace*{\fill}
-% \vskip 1.5em
- }
+	\vbox to 2.5in{
+			\vspace*{\fill}
+			\vskip 2em
+			\begin{center}%
+				{\Large\bf \@title \par}%
+				\vskip 0.375in minus 0.300in
+					{\large\it
+						\lineskip .5em
+						\begin{tabular}[t]{c}\@author
+						\end{tabular}\par}%
+			\end{center}%
+			\par
+			\vspace*{\fill}
+			% \vskip 1.5em
+		}
 }
 
 %
 % The abstract is preceded by a 12-pt bold centered heading
 \def\abstract{\begin{center}%
-{\large\bf \abstractname\vspace{-.5em}\vspace{\z@}}%
-\end{center}}
+		{\large\bf \abstractname\vspace{-.5em}\vspace{\z@}}%
+	\end{center}}
 \def\endabstract{}
 
 %
 % Main section titles are 12-pt bold.  Others can be same or smaller.
 %
 \def\section{\@startsection {section}{1}{\z@}{-3.5ex plus-1ex minus
-    -.2ex}{2.3ex plus.2ex}{\reset@font\large\bf}}
+	  -.2ex}{2.3ex plus.2ex}{\reset@font\large\bf}}

@@ -40,11 +40,11 @@
 %     this file to be compiled. (And changing refs style to 'plain'.)
 %
 %   * Make template self-contained in terms of figures, to
-%     allow this file to be compiled. 
+%     allow this file to be compiled.
 %
 %   * Added packages for hyperref, embedding fonts, and improving
 %     appearance.
-%   
+%
 %   * Removed outdated text.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -106,22 +106,21 @@
 
 %for single author (just remove % characters)
 \author{
-{\rm Me}\\
-VU, Amsterdam
-\and
-{\rm Other Smart People}\\
-VU, Amsterdam
-% copy the following lines to add more authors
-% \and
-% {\rm Name}\\
-%Name Institution
+	{\rm Me}\\
+	VU, Amsterdam
+	\and
+	{\rm Other Smart People}\\
+	VU, Amsterdam
+	% copy the following lines to add more authors
+	% \and
+	% {\rm Name}\\
+	%Name Institution
 } % end author
 
 \maketitle
 
 \input{src/00-abstract.tex}
 \input{src/01-introduction.tex}
-
 
 %-------------------------------------------------------------------------------
 \section{Footnotes, Verbatim, and Citations}
@@ -130,11 +129,11 @@ VU, Amsterdam
 Footnotes should be places after punctuation characters, without any
 spaces between said characters and footnotes, like so.%
 \footnote{Remember that USENIX format stopped using endnotes and is
-  now using regular footnotes.} And some embedded literal code may
+	now using regular footnotes.} And some embedded literal code may
 look as follows.
 
 \begin{verbatim}
-int main(int argc, char *argv[]) 
+int main(int argc, char *argv[])
 {
     return 0;
 }
@@ -156,7 +155,7 @@ from the need to notice that, e.g, ``Waldspurger'' appears after
 ``Arpachi-Dusseau'' when sorting references
 alphabetically%~\cite{waldspurger02,arpachiDusseau18:osbook}.
 
-reference testing~\cite{2012-osdi-spanner}.  
+reference testing~\cite{2012-osdi-spanner}.
 
 It'd be nice and thoughtful of you to include a suitable link in each
 and every bibtex entry that you use in your submission, to allow
@@ -172,29 +171,27 @@ clickable in the PDF because of the packages we've included.
 \label{sec:figs}
 %-------------------------------------------------------------------------------
 
-
 %---------------------------
 \begin{figure}
-\begin{center}
-\begin{tikzpicture}
-  \draw[thin,gray!40] (-2,-2) grid (2,2);
-  \draw[<->] (-2,0)--(2,0) node[right]{$x$};
-  \draw[<->] (0,-2)--(0,2) node[above]{$y$};
-  \draw[line width=2pt,blue,-stealth](0,0)--(1,1)
-        node[anchor=south west]{$\boldsymbol{u}$};
-  \draw[line width=2pt,red,-stealth](0,0)--(-1,-1)
-        node[anchor=north east]{$\boldsymbol{-u}$};
-\end{tikzpicture}
-\end{center}
-\caption{\label{fig:vectors} Text size inside figure should be as big as
-  caption's text. Text size inside figure should be as big as
-  caption's text. Text size inside figure should be as big as
-  caption's text. Text size inside figure should be as big as
-  caption's text. Text size inside figure should be as big as
-  caption's text. }
+	\begin{center}
+		\begin{tikzpicture}
+			\draw[thin,gray!40] (-2,-2) grid (2,2);
+			\draw[<->] (-2,0)--(2,0) node[right]{$x$};
+			\draw[<->] (0,-2)--(0,2) node[above]{$y$};
+			\draw[line width=2pt,blue,-stealth](0,0)--(1,1)
+			node[anchor=south west]{$\boldsymbol{u}$};
+			\draw[line width=2pt,red,-stealth](0,0)--(-1,-1)
+			node[anchor=north east]{$\boldsymbol{-u}$};
+		\end{tikzpicture}
+	\end{center}
+	\caption{\label{fig:vectors} Text size inside figure should be as big as
+		caption's text. Text size inside figure should be as big as
+		caption's text. Text size inside figure should be as big as
+		caption's text. Text size inside figure should be as big as
+		caption's text. Text size inside figure should be as big as
+		caption's text. }
 \end{figure}
 %% %---------------------------
-
 
 Here's a typical reference to a floating figure:
 Figure~\ref{fig:vectors}. Floats should usually be placed where latex
@@ -212,21 +209,20 @@ Lists are sometimes quite handy. If you want to itemize things, feel
 free:
 
 \begin{description}
-  
-\item[fread] a function that reads from a \texttt{stream} into the
-  array \texttt{ptr} at most \texttt{nobj} objects of size
-  \texttt{size}, returning returns the number of objects read.
 
-\item[Fred] a person's name, e.g., there once was a dude named Fred
-  who separated usenix.sty from this file to allow for easy
-  inclusion.
+	\item[fread] a function that reads from a \texttt{stream} into the
+	      array \texttt{ptr} at most \texttt{nobj} objects of size
+	      \texttt{size}, returning returns the number of objects read.
+
+	\item[Fred] a person's name, e.g., there once was a dude named Fred
+	      who separated usenix.sty from this file to allow for easy
+	      inclusion.
 \end{description}
 
 \noindent
 The noindent at the start of this paragraph in its tex version makes
 it clear that it's a continuation of the preceding paragraph, as
 opposed to a new paragraph in its own right.
-
 
 \subsection{LaTeX-ing Your TeX File}
 %-----------------------------------
