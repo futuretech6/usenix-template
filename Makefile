@@ -1,3 +1,5 @@
+.PHONY: all proposal clean
+
 LATEX= pdflatex --shell-escape
 BIBTEX= bibtex
 XDVI = xdvi
@@ -15,23 +17,23 @@ MAINPDF = ${MAINDOC}.pdf
 PROPOSAL = proposal
 PROPOSALPDF = ${PROPOSAL}.pdf
 
-all: clean
-	${LATEX} ${MAINDOC}.tex
-	${BIBTEX} ${MAINDOC}.aux
-	${LATEX} ${MAINDOC}.tex
-	${LATEX} ${MAINDOC}.tex
+OUTPUT_DIR = out
+FLAGS = -output-directory=${OUTPUT_DIR}
 
-proposal: clean
-	${LATEX} ${PROPOSAL}.tex
-	${BIBTEX} ${PROPOSAL}.aux
-	${LATEX} ${PROPOSAL}.tex
-	${LATEX} ${PROPOSAL}.tex
+all: clean | ${OUTPUT_DIR}
+	${LATEX} ${FLAGS} ${MAINDOC}.tex
+	${BIBTEX} ${OUTPUT_DIR}/${MAINDOC}.aux
+	${LATEX} ${FLAGS} ${MAINDOC}.tex
+	${LATEX} ${FLAGS} ${MAINDOC}.tex
 
+proposal: clean | ${OUTPUT_DIR}
+	${LATEX} ${FLAGS} ${PROPOSAL}.tex
+	${BIBTEX} ${OUTPUT_DIR}/${PROPOSAL}.aux
+	${LATEX} ${FLAGS} ${PROPOSAL}.tex
+	${LATEX} ${FLAGS} ${PROPOSAL}.tex
 
+${OUTPUT_DIR}:
+	mkdir -p ${OUTPUT_DIR}
 
 clean:
-	rm -f *out *aux *bbl *blg *log *.tex~ *.dvi *.fdb_lat* *.fls 
-	rm -f *converted-to.pdf
-	rm -f ${MAINDOC}.pdf ${PROPOSAL}.pdf
-	rm -Rf auto/
-	rm -Rf _minted-paper/ 
+	rm -Rf ${OUTPUT_DIR}
