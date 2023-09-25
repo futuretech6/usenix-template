@@ -1,5 +1,9 @@
 # project cache
 /out
 
+# latexindent
+indent.log
+*.bak*
+
 # misc
 .DS_Store

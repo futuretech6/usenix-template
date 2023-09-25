@@ -36,4 +36,5 @@ ${OUTPUT_DIR}:
 	mkdir -p ${OUTPUT_DIR}
 
 clean:
-	rm -Rf ${OUTPUT_DIR}
+	rm -f *.log *.bak*
+	rm -rf ${OUTPUT_DIR}
